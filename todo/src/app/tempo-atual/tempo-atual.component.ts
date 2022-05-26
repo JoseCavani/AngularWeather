@@ -15,7 +15,7 @@ export class TempoAtualComponent implements OnInit {
     this.tempoAtual =   {
     cidade:'São Paulo',
     pais:'Brasil',
-    date:'01/01/2020',
+    date:'05/05/2020',
     descricao:'Ensolarado',
     temperatura:20,
     image:'assets/img/ensolarado.svg' 

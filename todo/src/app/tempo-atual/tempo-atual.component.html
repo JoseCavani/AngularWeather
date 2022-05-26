@@ -1,13 +1,18 @@
-<div>
-    <div>
-        <span>{{tempoAtual.cidade}}, {{tempoAtual.pais}}</span>
-        <span>{{tempoAtual.date | date:'fullDate'}}</span>
+<div *ngIf = "tempoAtual">
+    <div fxLayout="row">
+        <div fxFlex = "66%" class = "mat-title no-margin">{{tempoAtual.cidade}}, {{tempoAtual.pais}}</div>
+        <div fxFlex class = "right mat-subheading-2 no-margin" > {{tempoAtual.date | date: 'dd MM EEEE'}}
+        </div>
     </div>
-    <div>
-        <img height="72" [src]='tempoAtual.image'>
-        <span> {{tempoAtual.temperatura | number:'1.0-0'}}°C</span>
-    </div>
-    <div>
-         {{tempoAtual.descricao}}
+    <div fxLayout ="row" fxLayoutAlign ="center center">
+        <div fxFlex ="55%">
+            <img style="zoom: 175%" alt="72" height = "72" [src] = "tempoAtual.image">
+        </div>
+        <div fxFlex class = "right no-margin">
+            <p class = "mat-display-3">{{tempoAtual.temperatura | number: '1.0-0'}}°C
+            </p>
+        </div>
+        <div fxLayoutAlign = "center" class = "mat-caption">
+            {{tempoAtual.descricao}}
         </div>
     </div>
